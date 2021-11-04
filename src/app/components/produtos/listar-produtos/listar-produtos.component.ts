@@ -37,7 +37,7 @@ export class ListarProdutosComponent implements OnInit {
     console.log(this.objetoModelo.graduado);
 
    }
-//Proxima aula sera o cadastrar produtos
+
   ngOnInit(): void {
   }
 
