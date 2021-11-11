@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem;">
+  <img [src]="foto" class="card-img-top" alt="...">
+  <!--Exemplo de Property, feito com colchetes, do ts para o html  -->
+  <div class="card-body">
+    <h5 class="card-title">{{nomeProduto | uppercase}}</h5>
+    <!--Exemplo de Data Binding - Interpolacao, ligacao de dados, One way do ts para html entre chaves-->
+    <span *ngIf="promocao; else elseBlock" class="badge badge-success">Promoção</span>
+    <!--Exemplo de Diretiva estrutural usa-se * para usar if e else no html-->
+    <ng-template #elseBlock>
+      <span class="badge badge-primary">Aproveite</span>
+    </ng-template>
+    <p class="card-text">Identificação: {{idProduto | number: '2.0-0'}}<br>
+      <!--1o campo: Qtd de inteiros, 2o campo: qtd minima de casas decimais, 3o campo: max de casas decimais-->
+      Validade: {{ dataValidade | date: 'shortDate'}}
+      <!--Formatar variavel com Pipe, varios tipos, date, moeda | -->
+
+    </p>
+    <a href="#" class="btn btn-primary">{{precoProduto | currency: 'BRL'}}</a>
+  </div>
+</div>
