@@ -15,9 +15,21 @@
     <app-card-produto
       foto="https://lightroombrasil.com.br/wp-content/uploads/bfi_thumb/13734919204_1d8125deed_h-ocjnnwp19u9hifljjrdo96b7tmlw9bo2szfz3dxayg.jpg"
       nomeProduto="Viagem a Nova York" [promocao]="false" [idProduto]="10" dataValidade="2021-12-31"
-      [precoProduto]="5000.00"></app-card-produto> <!--Binding retirado, pois nao esta importando nada dos componentes-->
+      [precoProduto]="5000.00"></app-card-produto>
+    <!--Binding retirado, pois nao esta importando nada dos componentes-->
+  </div>
+  <div class="col">
+    <th>Conheça Nossos Outros Cursos</th>
+    <tr *ngFor="let lista of listagemProdutos">
+      <td>{{lista.id}}</td>
+      <td>{{lista.nome}}</td>
+      <td>{{lista.validade |date: "shortDate"}} </td>
+      <td>{{lista.precoProduto | currency: "BRL"}}</td>
+
   </div>
 </div>
+
+
 
 
 

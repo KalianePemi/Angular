@@ -14,6 +14,13 @@ export class HomeComponent implements OnInit {
   promocao: boolean = true;
   foto: string = 'assets/img/crud.png';
   dataValidade: string = '2021-12-31';
+  listagemProdutos: any [] = [
+    {nome: 'Curso de Lógica de Programação ', precoProduto: 100.00, validade: '2021-12-31 ', id: 2},
+    {nome: 'Curso de CSharp ', precoProduto: 250.00, validade: '2021-12-31 ', id: 3},
+    {nome: 'Curso de Android ', precoProduto: 300.00, validade: '2021-12-31 ', id: 4},
+    {nome: 'Curso de Banco de Dados ', precoProduto: 180.00, validade: '2021-12-31 ', id: 5},
+    {nome: 'Curso de Metodolgias Ágeis ', precoProduto: 500.00, validade: '2021-12-31 ', id: 6},
+  ];
 
   constructor() {
     //variaveis de string com concatenação
